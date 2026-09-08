@@ -1,5 +1,17 @@
 # Olist E-Commerce Operations & Customer Experience Analytics
 
+**End-to-end Data Analytics Portfolio Project | Python · PostgreSQL · SQL · Power BI**
+
+Analyzed **99,441 e-commerce orders** to identify delivery-performance risks, customer-experience patterns, geographic hotspots, and seller/category performance issues.
+
+### Key Results at a Glance
+
+- **96,470** delivered orders with measurable delivery performance
+- **8.11%** late-delivery rate
+- **4.29 → 2.57** average review score for on-time vs. late orders
+- **6.92 → 23.92 days** median post-handoff transit time for on-time vs. late orders
+- **3.00%** repeat-customer rate within the observed dataset period 
+
 ## Project Overview
 
 This project analyzes the Brazilian Olist e-commerce dataset to identify operational performance issues and understand how delivery performance relates to customer experience.
@@ -168,15 +180,18 @@ Based on the observed patterns, potential operational actions include:
 4. Develop seller and product-category performance scorecards to identify recurring operational risk patterns and prioritize investigation.
 5. Investigate retention opportunities, given the relatively small share of customers placing repeat delivered orders within the observed period.
 
-Dataset
+## Dataset
 
-This project uses the public Brazilian E-Commerce Public Dataset by Olist, containing anonymized information about orders, customers, products, sellers, payments, reviews, and delivery activity.
+This project uses the **Brazilian E-Commerce Public Dataset by Olist**, which contains approximately 100,000 orders placed across multiple Brazilian marketplaces.
 
-Author
+The original raw CSV files and generated processed datasets are **not included in this repository** to keep the repository lightweight. They are excluded through `.gitignore`.
 
-Seraj Elgheryani
+To reproduce the analysis:
 
-Management Information Systems graduate focused on Data Analytics and Business Intelligence.
+1. Download the Brazilian E-Commerce Public Dataset by Olist from Kaggle.
+2. Place the original CSV files inside the `Data/` directory.
+3. Run `notebooks/01_data_cleaning.ipynb` to perform data cleaning, validation, feature engineering, and generate the processed analytical datasets.
+4. Continue with `02_eda_operations_cx.ipynb` and `03_business_analysis.ipynb` for the analytical workflow.
+5. Use the SQL scripts in `SQL/` for the PostgreSQL analysis.
 
-Core skills demonstrated: SQL · PostgreSQL · Python · Pandas · Power BI · Data Cleaning · Data Validation · Data Modeling · Business Analysis · KPI Development. 
-
+The small `product_category_name_translation.csv` reference file is retained in the repository.
